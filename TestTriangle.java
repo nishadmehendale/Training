@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import java.util.Scanner;
 import java.util.*;
 public class TestTriangle {
@@ -56,4 +56,3 @@ public class TestTriangle {
 	}
 
 }
->>>>>>> bd570d072b72182debd338d1f7406cb28fae8e8e

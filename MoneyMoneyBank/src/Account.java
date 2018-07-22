@@ -11,10 +11,15 @@ public class Account {
 		accountNumber = lastAccountNumber + 1;
 		lastAccountNumber = accountNumber;
 	}
+	
 	public Account(String name) {
 		this.name = name;
 		accountNumber = lastAccountNumber + 1;
 		lastAccountNumber = accountNumber;
+	}
+	
+	public double getBalance() {
+		return Balance;
 	}
 	public void withdraw(double amount) {
 		if(this.Balance > amount && amount>0)
@@ -27,7 +32,16 @@ public class Account {
 	public static int getNextAccountNumber() {
 		return lastAccountNumber + 1;
 	}
-	
+	public String transaction(Account reciever, double amount){
+		String result = new String();
+		if(PaymentGateway.transfer(this, reciever, amount)) {
+			result = "Payment Successful";
+		}
+		else {
+			result = "Payment Failed";
+		}
+		return result;
+	}
 	@Override
 	public String toString() {
 		return "Account [id = " +accountNumber+ " name=" + name + ", initialBalance=" + Balance + "]";

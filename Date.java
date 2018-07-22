@@ -141,6 +141,7 @@ public class Date {
 		}
 		return flag;
 		}
+	
 	public int[] diff(Date d) {
 		int []date= new int[3];
 		if(this.y >= d.y)
