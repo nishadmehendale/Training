@@ -27,12 +27,14 @@ public class Rectangle {
 		return circumference;
 	}
 	public boolean checkArea(Rectangle rectangle) {
+		boolean flag = false;
 		if(this.breadth != rectangle.breadth && this.length != rectangle.length) {
 		if(this.area() == rectangle.area())
-			return true;
+			flag = true;
 		else
-			return false;
+			flag = false;
 		}
+		return flag;
 	}
 	@Override
 	public String toString() {
