@@ -8,6 +8,8 @@ public class PaymentGateway {
 			//otherwise false is returned.
 			boolean status;
 			if(sender.getBalance() == amount) {
+				sender.withdraw(amount);
+				reciever.deposit(amount);
 				status = true;
 			}
 			else {
